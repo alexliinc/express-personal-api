@@ -1,11 +1,13 @@
 // require express and other modules
 var express = require('express'),
-    app = express();
+  app = express();
 
 // parse incoming urlencoded form data
 // and populate the req.body object
 var bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 app.use(bodyParser.json());
 
 /************
@@ -42,10 +44,21 @@ app.get('/api', function api_index(req, res) {
     message: "Welcome to my personal api! Here's what you need to know!",
     documentation_url: "https://github.com/example-username/express_self_api/README.md", // CHANGE ME
     base_url: "http://YOUR-APP-NAME.herokuapp.com", // CHANGE ME
-    endpoints: [
-      {method: "GET", path: "/api", description: "Describes all available endpoints"},
-      {method: "GET", path: "/api/profile", description: "Data about me"}, // CHANGE ME
-      {method: "POST", path: "/api/campsites", description: "E.g. Create a new campsite"} // CHANGE ME
+    endpoints: [{
+        method: "GET",
+        path: "/api",
+        description: "Describes all available endpoints"
+      },
+      {
+        method: "GET",
+        path: "/api/profile",
+        description: "Data about me"
+      }, // CHANGE ME
+      {
+        method: "POST",
+        path: "/api/campsites",
+        description: "E.g. Create a new campsite"
+      } // CHANGE ME
     ]
   })
 });
@@ -55,6 +68,7 @@ app.get('/api', function api_index(req, res) {
  **********/
 
 // listen on port 3000
-app.listen(process.env.PORT || 3000, function () {
+//app.listen(process.env.PORT || 3000)
+app.listen(process.env.PORT || 3000, function() {
   console.log('Express server is up and running on http://localhost:3000/');
 });
