@@ -23,17 +23,11 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <h1>Welcome</h1>
-        <h4><a href="/api">Read My API Documentation</a></h4>
-      </div>
-    </div>
-  </div>
   <!-- THE FORM -->
   <div class="container">
-    <h1 class="text-center">Movies App</h1>
+    <hr>
+    <h1 class="text-center">Welcome to the Movies App!</h1>
+    <hr>
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <form class="form-inline" id="newMovieForm">
@@ -42,8 +36,8 @@
             <input type="text" class="form-control" name="title" placeholder="Movie title">
           </div>
           <div class="form-group">
-            <label for="title">Staring</label>
-            <input type="text" class="form-control" name="staring" placeholder="Movie staring">
+            <label for="title">Starring</label>
+            <input type="text" class="form-control" name="staring" placeholder="Movie starring">
           </div>
           <div class="form-group">
             <label for="title">Release Date</label>
@@ -59,15 +53,23 @@
             {{#each movies}}
             <hr>
             <p>
-              <b>{{title}}</b> staring: {{staring}} <br> release on {{releaseDate}}
+              <b>{{title}}</b> starring: {{staring}} release on {{releaseDate}}
               <button type="button" name="button" class="deleteBtn btn btn-danger pull-right" data-id={{_id}}>Delete</button>
             </p>
             {{/each}}
           </script>
         </div>
+        <hr>
+        <br>
+        <br>
+        <center>
+          <h2><a href="/api">Read My API Documentation</a></h2>
+        </center>
       </div>
     </div>
   </div>
+
+
 </body>
 
 </html>
