@@ -138,7 +138,7 @@ app.get('/', function homepage(req, res) {
 app.get('/api', function api_index(req, res) {
   // TODO: Document all your api endpoints below
   res.json({
-    woops_i_has_forgot_to_document_all_my_endpoints: true, // CHANGE ME ;)
+    ballin_since_day_1_SAN: true, // CHANGE ME ;)
     message: "Welcome to my personal api! Here's what you need to know!",
     documentation_url: "https://github.com/alexliinc/express-personal-api/blob/master/README.md", // CHANGE ME
     base_url: "https://shielded-shelf-76619.herokuapp.com/", // CHANGE ME
@@ -151,11 +151,6 @@ app.get('/api', function api_index(req, res) {
         method: "GET",
         path: "/api/profile",
         description: "Here is some data about Alex"
-      }, // CHANGE ME
-      {
-        method: "POST",
-        path: "/api/campsites",
-        description: "E.g. Create a new campsite"
       }, // CHANGE ME
       {
         method: "GET",
